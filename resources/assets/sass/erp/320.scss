@@ -1,0 +1,96 @@
+@media (max-width: 767px) {
+	.content-wrapper,
+	.right-side,
+	.main-footer {
+		margin-left: 0;
+	}
+
+	.sidebar-open .content-wrapper,
+	.sidebar-open .right-side,
+	.sidebar-open .main-footer {
+		@include transform(translate(230px, 0));
+	}
+
+	.fixed .content-wrapper,
+	.fixed .right-side {
+		padding-top: 100px;
+	}
+
+	.navbar-collapse .main-header .navbar-right {
+		margin: 7.5px -15px;
+	}
+
+	.main-header {
+		position: relative;
+
+		.logo,
+		.navbar {
+			width: 100%;
+			float: none;
+			position: relative!important;
+		}
+
+		.navbar {
+			margin: 0;
+		}
+
+		.navbar-custom-menu {
+			float: right;
+		}
+
+		.navbar-right {
+			float: none;
+
+			> li {
+				color: inherit;
+				border: 0;
+			}
+		}
+	}
+
+	.main-sidebar,
+	.left-side {
+		padding-top: 100px!important;
+		@include transform(translate(-230px, 0));
+	}
+
+	.sidebar-open {
+		.main-sidebar,
+		.left-side {
+			@include transform(translate(0, 0));
+		}
+	}
+
+	.navbar-nav > .user-menu .user-image {
+		float: none;
+		margin-right: 0;
+		margin-top: -8px;
+		line-height: 10px;
+	}
+
+	.small-box {
+		text-align: center;
+
+		.icon {
+			display: none;
+		}
+
+		p {
+			font-size: 12px;
+		}
+	}
+
+	.invoice-box table tr {
+		&.top table td {
+			display: block;
+			text-align: center;
+			width: 100%;
+		}
+
+		&.information table td {
+			display: block;
+			text-align: center;
+			width: 100%;
+		}
+	}
+}

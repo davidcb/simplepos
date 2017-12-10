@@ -1,0 +1,43 @@
+
+// JQuery UI 1.12.1
+@import url(https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css);
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+// Font Awesome Icons
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
+
+// Ionicons
+@import url(https://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css);
+
+// Variables
+@import "core/variables";
+
+// Mixins
+@import "core/mixins";
+
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+// Sweet Alert
+@import "../css/sweetalert.css";
+
+// Dropzone
+@import "../css/dropzone.css";
+
+// Cropper
+@import "../css/cropper.min.css";
+
+// Skin Red
+@import "../css/skin-red.css";
+
+// Color Picker
+@import "erp/colorpicker";
+
+// App SASS
+@import "erp/1920";
+@import "erp/1024";
+@import "erp/768";
+@import "erp/320";
+@import "erp/print";

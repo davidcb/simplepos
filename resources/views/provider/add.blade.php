@@ -1,0 +1,91 @@
+@extends('layouts.app')
+
+@section('content')
+<form id="form" role="form" method="POST" action="{{ url('/nuevo-proveedor') }}">
+	<input type="hidden" name="_token" value="{{ csrf_token() }}">
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="form-horizontal">
+
+					<div class="form-group">
+						<div class="col-xs-12 col-md-4">
+							<label class="control-label">Nombre</label>
+							<input type="text" class="form-control" name="name" value="{{ old('name') }}">
+						</div>
+						<div class="col-xs-12 col-md-4">
+							<label class="control-label">Denominación social</label>
+							<input type="text" class="form-control" name="business_name" value="{{ old('business_name') }}">
+						</div>
+						<div class="col-xs-12 col-md-4">
+							<label class="control-label">CIF</label>
+							<input type="text" class="form-control" name="cif" value="{{ old('cif') }}">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-xs-12 col-md-4">
+							<label class="control-label">Dirección</label>
+							<input type="text" class="form-control" name="address" value="{{ old('address') }}">
+						</div>
+						<div class="col-xs-12 col-md-4">
+							<label class="control-label">Código postal</label>
+							<input type="text" class="form-control" name="zipcode" value="{{ old('zipcode') }}">
+						</div>
+						<div class="col-xs-12 col-md-4">
+							<label class="control-label">Municipio</label>
+							<input type="text" class="form-control" name="city" value="{{ old('city') }}">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-xs-12 col-md-4">
+							<label class="control-label">Provincia</label>
+							<input type="text" class="form-control" name="province" value="{{ old('province') }}">
+						</div>
+						<div class="col-xs-12 col-md-4">
+							<label class="control-label">Teléfono</label>
+							<input type="text" class="form-control" name="telephone" value="{{ old('telephone') }}">
+						</div>
+						<div class="col-xs-12 col-md-4">
+							<label class="control-label">Teléfono 2</label>
+							<input type="text" class="form-control" name="telephone2" value="{{ old('telephone2') }}">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-xs-12 col-md-4">
+							<label class="control-label">Fax</label>
+							<input type="text" class="form-control" name="fax" value="{{ old('fax') }}">
+						</div>
+						<div class="col-xs-12 col-md-4">
+							<label class="control-label">Email</label>
+							<input type="text" class="form-control" name="email" value="{{ old('email') }}">
+						</div>
+						<div class="col-xs-12 col-md-4">
+							<label class="control-label">IBAN</label>
+							<input type="text" class="form-control" name="iban" value="{{ old('iban') }}">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-xs-12 col-md-4">
+							<label class="control-label">Responsable</label>
+							<input type="text" class="form-control" name="contact" value="{{ old('contact') }}">
+						</div>
+					</div>
+
+					<div class="form-group buttons">
+						<div class="col-md-12">
+							<a href="{{ URL::previous() }}" class="cancel_button">Cancelar</a>
+							<button type="submit" class="my_button submit">Guardar</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
+
+@endsection

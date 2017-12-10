@@ -1,0 +1,134 @@
+header {
+    @include clearfix;
+
+    > a {
+        background-color: $color-tpv-blue;
+        border-bottom: solid 1px $color-tpv-blue;
+        color: $color-tpv-white;
+        display: inline-block;
+        float: left;
+        font-size: 13px;
+        font-weight: 600;
+        height: 48px;
+        line-height: 16px;
+        margin-right: 1px;
+        padding: 8px 15px 0;
+        text-align: center;
+        text-transform: uppercase;
+
+        &:hover {
+            background-color: $color-tpv-gray;
+            border-bottom-color: $color-tpv-gray;
+            color: $color-tpv-blue;
+            text-decoration: none;
+        }
+
+        &.back {
+            background-image: url(../img/tpv/back.svg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 32px 27px;
+            text-indent: -9999px;
+            width: 5.8%;
+
+            &:hover {
+                background-image: url(../img/tpv/back_blue.svg);
+            }
+        }
+
+        &.list {
+            padding-top: 16px;
+            width: 8%;
+        }
+
+        &.parked {
+            padding-top: 16px;
+            position: relative;
+            width: 12%;
+
+            span {
+                background-color: $color-tpv-white;
+                border-radius: 50%;
+                color: $color-tpv-blue;
+                font-size: 12px;
+                font-weight: 700;
+                height: 16px;
+                line-height: 1;
+                padding: 3px 0 4px;
+                position: absolute;
+                right: 10px;
+                top: 5px;
+                width: 16px;
+            }
+
+            &:hover {
+                span {
+                    background-color: $color-tpv-blue;
+                    color: $color-tpv-gray;
+                }
+            }
+        }
+
+        &.moves {
+            width: 11.5%;
+        }
+
+        &.close-cash {
+            margin-right: 0;
+            width: 8.3%;
+        }
+
+        &.logout {
+            background-color: $color-tpv-red;
+            background-image: url(../img/tpv/logout.svg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 28px 30px;
+            margin-right: 0;
+            text-indent: -9999px;
+            width: 5.8%;
+        }
+    }
+
+    .employee {
+        border-bottom: solid 1px $color-tpv-blue;
+        display: inline-block;
+        float: left;
+        height: 48px;
+        padding: 9px 21px 0;
+        width: 48.1%;
+
+        span {
+            color: $color-tpv-blue;
+            display: inline-block;
+            float: right;
+            font-size: 13px;
+            font-weight: 600;
+            overflow: hidden;
+            padding-top: 7px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        a {
+            background-color: $color-tpv-blue;
+            border-radius: 10px;
+            color: $color-tpv-white;
+            display: inline-block;
+            float: right;
+            font-size: 12px;
+            font-weight: 600;
+            height: 30px;
+            line-height: 1;
+            margin-left: 18px;
+            padding: 9px 13px 9px;
+            text-transform: uppercase;
+
+            &:hover {
+                background-color: $color-tpv-gray;
+                color: $color-tpv-blue;
+                text-decoration: none;
+            }
+        }
+    }
+}

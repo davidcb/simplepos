@@ -1,0 +1,27 @@
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700|Open+Sans:400);
+
+// Variables
+@import "core/variables";
+
+// Mixins
+@import "core/mixins";
+
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+// Sweet Alert
+@import "../css/sweetalert.css";
+
+// App SASS
+@import "tpv/base";
+@import "tpv/login";
+@import "tpv/header";
+@import "tpv/cash";
+@import "tpv/sales";
+@import "tpv/visits";
+@import "tpv/tpv";
+@import "tpv/sale";
+@import "tpv/keyboard";
+@import "tpv/print";

@@ -1,0 +1,175 @@
+.sale {
+    padding-top: 30px;
+
+    .products {
+        border: solid 2px $color-tpv-blue;
+        border-radius: 10px;
+        display: inline-block;
+        float: left;
+        width: 60.6%;
+
+        .header {
+            h2 {
+                font-size: 35px;
+                font-weight: 600;
+                line-height: 1;
+                margin: 0;
+                padding: 26px 30px 47px;
+                text-transform: uppercase;
+            }
+
+            h3 {
+                border-top: solid 2px $color-tpv-blue;
+                color: $color-tpv-white;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 34px;
+                margin: 0;
+                text-align: center;
+
+                &.ok {
+                    background-color: $color-tpv-green;
+                }
+
+                &.nok {
+                    background-color: $color-tpv-red;
+                }
+            }
+        }
+
+        .body {
+            border-top: solid 2px $color-tpv-blue;
+
+            table {
+                width: 100%;
+
+                thead {
+                    tr {
+                        border-bottom: solid 2px $color-tpv-blue;
+
+                        th {
+                            background-color: $color-tpv-gray;
+                            border-left: solid 1px $color-tpv-blue;
+                            font-size: 16px;
+                            font-weight: 600;
+                            line-height: 23px;
+                            padding: 8px 5px;
+                            text-align: center;
+                            text-transform: uppercase;
+
+                            &:first-child {
+                                border-left: none;
+                            }
+                        }
+                    }
+                }
+
+                tbody {
+                    tr {
+                        border-bottom: solid 1px $color-tpv-blue;
+
+                        td {
+                            border-left: solid 1px $color-tpv-blue;
+                            font-size: 16px;
+                            line-height: 23px;
+                            padding: 8px 5px;
+                            text-align: center;
+                            text-transform: uppercase;
+
+                            &:first-child {
+                                border-left: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer {
+            border-top: solid 2px $color-tpv-blue;
+            font-size: 22px;
+            font-weight: 600;
+            line-height: 32px;
+            padding: 16px 10px;
+            text-align: right;
+            text-transform: uppercase;
+
+            span {
+                font-size: 32px;
+            }
+        }
+    }
+
+    .details {
+        border: solid 2px $color-tpv-blue;
+        border-radius: 10px;
+        display: inline-block;
+        float: right;
+        padding-top: 55px;
+        position: relative;
+        width: 37.7%;
+
+        .total {
+            @include clearfix;
+            padding: 0 30px 0 10px;
+
+            p {
+                display: inline-block;
+                float: right;
+                font-size: 32px;
+                font-weight: 600;
+                line-height: 32px;
+                margin: 0 0 30px;
+                text-transform: uppercase;
+
+                &:first-child {
+                    float: left;
+                    font-size: 22px;
+                }
+            }
+        }
+
+        .payment-method {
+            @include clearfix;
+            padding: 0 30px 0 10px;
+
+            p {
+                color: $color-tpv-red;
+                display: inline-block;
+                float: right;
+                font-size: 25px;
+                font-weight: 600;
+                line-height: 25px;
+                margin: 0 0 30px;
+                text-transform: uppercase;
+
+                &:first-child {
+                    color: $color-tpv-blue;
+                    float: left;
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .sale-buttons {
+            a {
+                background-color: $color-tpv-blue;
+                color: $color-tpv-white;
+                display: block;
+                font-size: 25px;
+                font-weight: 600;
+                line-height: 32px;
+                margin-top: 2px;
+                padding: 35px;
+                text-align: center;
+                text-decoration: none;
+                text-transform: uppercase;
+
+                &:hover {
+                    background-color: $color-tpv-gray;
+                    color: $color-tpv-blue;
+                }
+            }
+        }
+    }
+}

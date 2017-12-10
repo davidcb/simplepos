@@ -1,0 +1,78 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin transition($args...) {
+	-webkit-transition: $args;
+	-moz-transition: $args;
+	-ms-transition: $args;
+	transition: $args;
+}
+
+@mixin transform($args...) {
+	-webkit-transform: $args;
+	-moz-transform: $args;
+	-ms-transform: $args;
+	transform: $args;
+}
+
+@mixin transformRotate($degrees) {
+	      transform: rotate($degrees);
+	 -moz-transform: rotate($degrees);
+	  -ms-transform: rotate($degrees);
+  -webkit-transform: rotate($degrees);
+}
+
+@mixin gradient-top-bottom($topColor, $bottomColor) {
+	background: $bottomColor;
+	background: -moz-linear-gradient(top, $topColor 0%, $bottomColor 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$topColor), color-stop(100%,$bottomColor));
+	background: -webkit-linear-gradient(top, $topColor 0%,$bottomColor 100%);
+	background: -o-linear-gradient(top, $topColor 0%,$bottomColor 100%);
+	background: -ms-linear-gradient(top, $topColor 0%,$bottomColor 100%);
+	background: linear-gradient(to bottom, $topColor 0%,$bottomColor 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$topColor', endColorstr='$bottomColor', GradientType=0);
+}
+
+@mixin gradient-top-bottom-image($topColor, $bottomColor, $backgroundImage, $leftPos, $topPos) {
+	background: url($backgroundImage) no-repeat $leftPos $topPos $bottomColor;
+	background: url($backgroundImage) no-repeat $leftPos $topPos, -moz-linear-gradient(top, $topColor 0%, $bottomColor 100%);
+	background: url($backgroundImage) no-repeat $leftPos $topPos, -webkit-gradient(linear, left top, left bottom, color-stop(0%,$topColor), color-stop(100%,$bottomColor));
+	background: url($backgroundImage) no-repeat $leftPos $topPos, -webkit-linear-gradient(top, $topColor 0%,$bottomColor 100%);
+	background: url($backgroundImage) no-repeat $leftPos $topPos, -o-linear-gradient(top, $topColor 0%,$bottomColor 100%);
+	background: url($backgroundImage) no-repeat $leftPos $topPos, -ms-linear-gradient(top, $topColor 0%,$bottomColor 100%);
+	background: url($backgroundImage) no-repeat $leftPos $topPos, linear-gradient(to bottom, $topColor 0%,$bottomColor 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$topColor', endColorstr='$bottomColor', GradientType=0);
+}
+
+@mixin background-clip-padding() {
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding;
+	background-clip: padding-box;
+}
+
+@mixin placeholderColor($color) {
+	::-webkit-input-placeholder {
+		color: $color;
+	}
+	::-moz-placeholder {
+		color: $color;
+	}
+	:-ms-input-placeholder {
+		color: $color;
+	}
+	:-moz-placeholder {
+		color: $color;
+	}
+}
+
+@mixin flexContainer() {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}

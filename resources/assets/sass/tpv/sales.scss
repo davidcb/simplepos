@@ -1,0 +1,180 @@
+.sales {
+    .frame {
+        border: solid 2px $color-tpv-blue;
+        border-radius: 10px;
+        margin-top: 30px;
+
+        header {
+            padding: 14px 22px 14px 30px;
+
+            h2 {
+                display: inline-block;
+                float: left;
+                font-size: 25px;
+                font-weight: 600;
+                margin: 10px 0 0;
+                text-transform: uppercase;
+            }
+
+            .search {
+                display: inline-block;
+                float: right;
+                position: relative;
+                width: 413px;
+
+                input {
+                    border: solid 2px $color-tpv-blue;
+                    border-radius: 5px;
+                    font-size: 16px;
+                    font-weight: 600;
+                    height: 40px;
+                    line-height: 20px;
+                    padding: 10px 15px;
+                    width: 100%;
+                }
+
+                button {
+                    background: url(../img/tpv/search.svg) no-repeat;
+                    background-size: cover;
+                    border: none;
+                    display: block;
+                    height: 18px;
+                    position: absolute;
+                    right: 12px;
+                    text-indent: -9999px;
+                    top: 11px;
+                    width: 17px;
+                }
+            }
+        }
+
+        table {
+            width: 100%;
+
+            thead {
+                tr {
+                    background-color: $color-tpv-gray;
+                    border-bottom: solid 2px $color-tpv-blue;
+                    border-top: solid 2px $color-tpv-blue;
+                    color: $color-tpv-blue;
+                    font-size: 14px;
+                    font-weight: 700;
+                    height: 35px;
+                    line-height: 21px;
+                    padding: 7px 10px;
+                    text-transform: uppercase;
+
+                    th {
+                        border-left: solid 1px $color-tpv-blue;
+                        text-align: center;
+
+                        &:first-child {
+                            border-left: none;
+                        }
+                    }
+                }
+            }
+
+            tbody {
+                max-height: 594px;
+                overflow: auto;
+
+                tr {
+                    border-bottom: solid 1px $color-tpv-blue;
+                    height: 50px;
+
+                    td {
+                        border-left: solid 1px $color-tpv-blue;
+                        color: $color-tpv-blue;
+                        font-size: 14px;
+                        font-weight: 500;
+                        padding: 0 10px;
+                        text-align: center;
+
+                        &:first-child {
+                            border-left: none;
+                            width: 54px;
+                        }
+
+                        .view {
+                            background-color: $color-tpv-blue;
+                            background-image: url(../img/tpv/back.svg);
+                            background-position: center center;
+                            background-repeat: no-repeat;
+                            background-size: 20px 16px;
+                            display: block;
+                            height: 32px;
+                            text-indent: 9999px;
+                            @include transformRotate(180deg);
+                            width: 32px;
+
+                            &:hover {
+                                background-color: $color-tpv-gray;
+                                background-image: url(../img/tpv/back_blue.svg);
+                            }
+                        }
+                    }
+                }
+            }
+
+            tfoot {
+                tr {
+                    border-top: solid 2px $color-tpv-blue;
+
+                    td {
+                        color: $color-tpv-blue;
+                        font-size: 18px;
+                        font-weight: 700;
+                        line-height: 25px;
+                        padding: 12px 20px;
+                        text-transform: uppercase;
+
+                        &:first-child {
+                            color: $color-tpv-red;
+                        }
+
+                        &:last-child {
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.buttons {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+
+    a {
+        background-color: $color-tpv-blue;
+        color: $color-tpv-white;
+        display: inline-block;
+        float: left;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 29px;
+        padding: 28px 0;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        @include transition (all 0.3s);
+        width: 50%;
+
+        &:first-child {
+            border-right: solid 1px $color-tpv-white;
+        }
+
+        &:last-child {
+            border-left: solid 1px $color-tpv-white;
+        }
+
+        &:hover {
+            background-color: $color-tpv-gray;
+            color: $color-tpv-blue;
+        }
+    }
+}

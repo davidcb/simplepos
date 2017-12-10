@@ -1,0 +1,131 @@
+@media (max-width: 991px) {
+	.main-header .navbar-custom-menu a,
+	.main-header .navbar-right a {
+		color: inherit;
+		background: transparent;
+	}
+
+	.content-header > .breadcrumb {
+		position: relative;
+		margin-top: 5px;
+		top: 0;
+		right: 0;
+		float: none;
+		background: #d2d6de;
+		padding-left: 10px;
+
+		li:before {
+			color: #97a0b3;
+		}
+	}
+
+	.navbar-custom-menu .navbar-nav {
+		margin: 0;
+		float: left;
+
+		> li {
+			float: left;
+
+			> a {
+				padding-top: 15px;
+				padding-bottom: 15px;
+				line-height: 20px;
+			}
+		}
+	}
+
+	.navbar-nav {
+		> .notifications-menu,
+		> .messages-menu,
+		> .tasks-menu {
+			> .dropdown-menu > li.footer > a {
+				background: #fff!important;
+				color: #444!important;
+			}
+		}
+	}
+
+	.navbar-nav > .user-menu > .dropdown-menu > .user-body a {
+		background: #fff !important;
+		color: #444 !important;
+	}
+
+	.navbar-custom-menu > .navbar-nav {
+		float: right;
+
+		> li {
+			position: static;
+
+			> .dropdown-menu {
+				position: absolute;
+				right: 5%;
+				left: auto;
+				border: 1px solid #ddd;
+				background: #fff;
+			}
+		}
+	}
+
+	.chart-legend > li {
+		float: left;
+		margin-right: 10px;
+	}
+
+	.mailbox .nav-stacked > li:not(.header) {
+		float: left;
+		width: 50%;
+
+		&.header {
+			border: 0!important;
+		}
+	}
+
+	.mailbox .search-form {
+		margin-top: 10px;
+	}
+
+	.error-page {
+		width: 100%;
+
+		> .headline {
+			float: none;
+			text-align: center;
+		}
+
+		> .error-content {
+			margin-left: 0;
+
+			> h3 {
+				text-align: center;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.sidebar-collapse .content-wrapper,
+	.sidebar-collapse .right-side,
+	.sidebar-collapse .main-footer {
+		margin-left: 0;
+	}
+
+	.sidebar-collapse {
+		.main-sidebar,
+		.left-side {
+			@include transform(translate(-230px, 0));
+		}
+	}
+	
+	.modal-content {
+		-webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.125) !important;
+		box-shadow: 0 2px 3px rgba(0, 0, 0, 0.125) !important;
+	}
+}
+
+@media (max-width: 768px) {
+	.login-box,
+	.register-box {
+		width: 90%;
+		margin-top: 20px;
+	}
+}

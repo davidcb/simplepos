@@ -1,0 +1,50 @@
+.keyboard {
+    background-color: $color-tpv-white;
+    bottom: 57px;
+    @include clearfix;
+    /*display: none;*/
+    font-family: 'Open Sans', sans-serif;
+    max-width: 257px;
+    position: absolute;
+    right: 51px;
+
+    .key {
+        background-color: $color-tpv-blue;
+        border-radius: 5px;
+        color: $color-tpv-white;
+        display: inline-block;
+        float: left;
+        font-size: 46px;
+        height: 54px;
+        line-height: 46px;
+        margin-bottom: 3px;
+        margin-right: 3px;
+        padding: 4px 0;
+        text-align: center;
+        text-decoration: none;
+        width: 62px;
+
+        &:hover {
+            background-color: $color-tpv-red;
+        }
+
+        &.clear {
+            float: right;
+            height: 111px;
+            margin-right: 0;
+            padding: 32px 0;
+        }
+
+        &.enter {
+            float: right;
+            font-size: 20px;
+            height: 111px;
+            margin-right: 0;
+            padding: 32px 0;
+        }
+
+        &.doublezero {
+            font-size: 32px;
+        }
+    }
+}

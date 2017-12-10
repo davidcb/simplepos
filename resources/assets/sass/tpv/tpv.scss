@@ -1,0 +1,333 @@
+.tpv {
+    padding-top: 12px;
+
+    .products {
+        display: inline-block;
+        float: left;
+        width: 68.8%;
+
+        .page {
+            @include clearfix;
+            display: none;
+
+            &.active {
+                display: block;
+            }
+
+            a {
+                background-color: $color-tpv-white;
+                border: solid 2px $color-tpv-blue;
+                border-radius: 5px;
+                color: $color-tpv-blue;
+                float: left;
+                font-size: 11px;
+                font-weight: 600;
+                height: 45px;
+                line-height: 12px;
+                margin-bottom: 6px;
+                margin-left: 1.5%;
+                padding: 2px 8px;
+                text-align: center;
+                text-decoration: none;
+                text-transform: uppercase;
+                vertical-align: middle;
+                width: 18.8%;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                   -ms-flex-align: center;
+                      align-items: center;
+                -webkit-box-pack: center;
+                   -ms-flex-pack: center;
+                 justify-content: center;
+
+                &:nth-child(5n+1) {
+                    clear: both;
+                    margin-left: 0;
+                }
+
+                &:hover {
+                    background-color: $color-tpv-gray;
+                }
+            }
+        }
+
+        /*nav {
+            a {
+                background: url(../img/tpv/back.svg) center center no-repeat $color-tpv-blue;
+                background-size: 50px 41px;
+                border-radius: 5px;
+                display: inline-block;
+                float: right;
+                height: 90px;
+                margin-right: 1.6%;
+                text-indent: -9999px;
+                width: 49.2%;
+
+                &.next {
+                    margin-right: 0;
+                    text-indent: 9999px;
+                    @include transformRotate(180deg);
+                }
+
+                &.disabled {
+                    background-color: $color-tpv-gray;
+                    cursor: default;
+                }
+
+                &:hover {
+                    background-color: $color-tpv-gray;
+                }
+            }
+        }*/
+    }
+
+    .shopping-list {
+        border: solid 2px $color-tpv-blue;
+        border-radius: 10px;
+        display: inline-block;
+        float: right;
+        margin-right: 29px;
+        min-height: 555px;
+        position: relative;
+        width: 26.6%;
+
+        .footer {
+            background-color: $color-tpv-blue;
+            @include clearfix;
+            color: $color-tpv-white;
+            height: 60px;
+            padding: 20px 18px 0;
+
+            div {
+                display: inline-block;
+                float: right;
+                font-size: 14px;
+                line-height: 24px;
+                text-align: right;
+
+                &.total_price {
+                    font-size: 24px;
+                    font-weight: 600;
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        .header {
+            @include clearfix;
+
+            div {
+                background-color: $color-tpv-gray;
+                border-bottom: solid 2px $color-tpv-blue;
+                border-left: solid 1px $color-tpv-blue;
+                color: $color-tpv-blue;
+                display: inline-block;
+                float: left;
+                font-size: 11px;
+                font-weight: 600;
+                height: 28px;
+                line-height: 26px;
+                text-align: center;
+                text-transform: uppercase;
+
+                &:first-child {
+                    border-left: none;
+                    width: 0;
+                }
+
+                &:nth-child(2) {
+                    border-left: none;
+                    width: 53%;
+                }
+
+                &:nth-child(3) {
+                    width: 0;
+                }
+
+                &:nth-child(4) {
+                    width: 14.8%;
+                }
+
+                &:nth-child(5) {
+                    width: 13%;
+                }
+
+                &:nth-child(6) {
+                    width: 19.2%;
+                }
+            }
+        }
+
+        .body {
+            @include clearfix;
+
+            .item {
+                cursor: pointer;
+
+                &.selected {
+                    div {
+                        background-color: $color-tpv-gray;
+                    }
+                }
+
+                div {
+                    background-color: $color-tpv-white;
+                    border-bottom: solid 1px $color-tpv-blue;
+                    border-left: solid 1px $color-tpv-blue;
+                    color: $color-tpv-blue;
+                    display: inline-block;
+                    float: left;
+                    font-size: 11px;
+                    line-height: 13px;
+                    padding: 7px 5px;
+                    text-align: center;
+                    text-transform: uppercase;
+
+                    &:first-child {
+                        border-left: none;
+                        width: 0;
+                    }
+
+                    &:nth-child(2) {
+                        border-left: none;
+                        width: 53%;
+                    }
+
+                    &:nth-child(3) {
+                        width: 0;
+                    }
+
+                    &:nth-child(4) {
+                        width: 14.8%;
+                    }
+
+                    &:nth-child(5) {
+                        width: 13%;
+                    }
+
+                    &:nth-child(6) {
+                        width: 19.2%;
+                    }
+                }
+            }
+        }
+
+        .actions {
+            position: absolute;
+            right: -41px;
+            top: 60px;
+
+            a {
+                background-color: $color-tpv-blue;
+                background-position: center center;
+                background-repeat: no-repeat;
+                display: block;
+                height: 41px;
+                margin-bottom: 2px;
+                text-indent: -9999px;
+                width: 38px;
+
+                &.add {
+                    background-image: url(../img/tpv/plus.svg);
+                    background-size: 22px 22px;
+                }
+
+                &.remove {
+                    background-image: url(../img/tpv/minus.svg);
+                    background-size: 24px 3px;
+                }
+
+                &.delete {
+                    background-color: $color-tpv-red;
+                    background-image: url(../img/tpv/remove.svg);
+                    background-size: 23px 25px;
+                }
+
+                &.discount {
+                    background-image: url(../img/tpv/discount.svg);
+                    background-size: 17px 19px;
+                }
+
+                &:hover {
+                    background-color: $color-tpv-gray;
+                }
+            }
+        }
+    }
+}
+
+.buttons-tpv {
+    background-color: $color-tpv-blue;
+    bottom: 0;
+    @include clearfix;
+    left: 0;
+    position: fixed;
+    right: 0;
+
+    .ean {
+        display: inline-block;
+        float: left;
+        height: 48px;
+        padding: 9px 2% 10px 2%;
+        position: relative;
+        width: 56.4%;
+
+        input {
+            border: none;
+            border-radius: 5px;
+            color: $color-tpv-blue;
+            font-size: 13px;
+            font-weight: 500;
+            height: 29px;
+            line-height: 17px;
+            padding: 6px 34px;
+            width: 100%;
+        }
+
+        button {
+            background: url(../img/tpv/search.svg) no-repeat;
+            background-size: cover;
+            border: none;
+            display: block;
+            height: 17px;
+            position: absolute;
+            right: 47px;
+            text-indent: -9999px;
+            top: 15px;
+            width: 17px;
+        }
+    }
+
+    a {
+        border-left: solid 1px $color-tpv-white;
+        color: $color-tpv-white;
+        display: inline-block;
+        float: left;
+        font-size: 14px;
+        font-weight: 600;
+        height: 48px;
+        line-height: 20px;
+        padding: 14px 10px;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &.park {
+            width: 9.3%;
+        }
+
+        &.cancel {
+            background-color: $color-tpv-red;
+            width: 13.6%;
+        }
+
+        &.charge {
+            background-color: $color-tpv-green;
+            border-left: none;
+            font-size: 20px;
+            width: 20.7%;
+        }
+    }
+}

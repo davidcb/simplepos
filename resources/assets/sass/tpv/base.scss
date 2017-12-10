@@ -1,0 +1,417 @@
+body {
+    color: $color-tpv-blue;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+
+.content-wrapper {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.container {
+    padding: 0 20px;
+    width: 100%;
+}
+
+.overlay-wrapper {
+    background-color: $color-tpv-white;
+    bottom: 0;
+    display: none;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 48px;
+
+    .close-modal {
+        background: url(../img/tpv/close_blue.svg);
+        background-size: cover;
+        display: block;
+        height: 24px;
+        position: absolute;
+        right: 20px;
+        text-indent: -9999px;
+        top: 20px;
+        width: 24px;
+    }
+
+    &.employee {
+        padding-top: 20px;
+
+        .container {
+            width: 824px;
+
+            h2 {
+                color: $color-tpv-blue;
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 1;
+                margin: 0 0 20px;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+            div {
+                @include clearfix;
+
+                a {
+                    border: solid 2px $color-tpv-blue;
+                    border-radius: 5px;
+                    color: $color-tpv-blue;
+                    display: inline-block;
+                    float: left;
+                    font-size: 18px;
+                    font-weight: 700;
+                    height: 90px;
+                    line-height: 24px;
+                    margin-bottom: 10px;
+                    margin-left: 1.5%;
+                    padding: 34px 0 32px;
+                    text-align: center;
+                    width: 32.3%;
+
+                    &:nth-child(3n+1) {
+                        margin-left: 0;
+                    }
+
+                    &:hover {
+                        background-color: $color-tpv-gray;
+                        color: $color-tpv-blue;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &.moves, &.discount, &.make-return, &.charge-sale {
+        padding-top: 20px;
+
+        .container {
+            width: 100%;
+
+            h2 {
+                color: $color-tpv-blue;
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 1;
+                margin: 0 0 20px;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+            .frame {
+                border: solid 2px $color-tpv-blue;
+                border-radius: 9px;
+                @include clearfix;
+                padding: 25px 16px;
+
+                .concept {
+                    label {
+                        display: block;
+                        font-size: 16px;
+                        font-weight: 500;
+                        margin-bottom: 8px;
+                    }
+
+                    input {
+                        border: solid 2px $color-tpv-blue;
+                        display: block;
+                        font-size: 14px;
+                        line-height: 20px;
+                        padding: 8px 10px;
+                        width: 100%;
+                    }
+                }
+
+                .inputs {
+                    @include clearfix;
+                    margin-top: 20px;
+
+                    label {
+                        display: inline-block;
+                        float: left;
+                        font-size: 18px;
+                        font-weight: 700;
+                        margin: 8px 8px 0 0;
+                        text-transform: uppercase;
+
+                        &:nth-child(4) {
+                            float: right;
+                        }
+                    }
+
+                    input {
+                        border: solid 2px $color-tpv-blue;
+                        display: inline-block;
+                        float: left;
+                        font-size: 24px;
+                        line-height: 1;
+                        padding: 8px 10px;
+                        text-align: right;
+                        width: 157px;
+
+                        &:nth-child(3) {
+                            float: right;
+                        }
+                    }
+                }
+
+                .select {
+                    clear: both;
+                    margin-bottom: 15px;
+                    position: relative;
+
+                    select {
+                        appearance: none;
+                        background: $color-tpv-white;
+                        border: solid 2px $color-tpv-blue;
+                        font-size: 18px;
+                        height: 40px;
+                        line-height: 30px;
+                        padding: 5px;
+                        width: 100%;
+                    }
+
+                    &:after {
+                        background: url(../img/tpv/select.svg) no-repeat;
+                        background-size: cover;
+                        content: '';
+                        display: block;
+                        height: 9px;
+                        position: absolute;
+                        right: 20px;
+                        top: 19px;
+                        width: 19px;
+                    }
+                }
+
+                .notes {
+                    margin-top: 30px;
+
+                    label {
+                        font-size: 16px;
+                        font-weight: 500;
+                        margin-bottom: 8px;
+                    }
+
+                    textarea {
+                        border: solid 2px $color-tpv-blue;
+                        font-size: 14px;
+                        height: 80px;
+                        line-height: 20px;
+                        padding: 10px;
+                        width: 100%;
+                    }
+                }
+
+            	button {
+                    background-color: $color-tpv-blue;
+                    border: solid 2px $color-tpv-blue;
+                    border-radius: 9px;
+                    color: $color-tpv-white;
+                    display: block;
+                    font-size: 22px;
+                    font-weight: 600;
+                    line-height: 30px;
+                    margin: 20px auto 0;
+                    padding: 10px 0;
+                    text-transform: uppercase;
+                    width: 260px;
+
+                    &:hover {
+                        background-color: $color-tpv-gray;
+                        color: $color-tpv-blue;
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            table {
+                border: solid 2px $color-tpv-blue;
+                width: 100%;
+
+                thead {
+                    tr {
+                        border-bottom: solid 2px $color-tpv-blue;
+
+                        th {
+                            background-color: $color-tpv-gray;
+                            border-left: solid 1px $color-tpv-blue;
+                            font-size: 16px;
+                            font-weight: 600;
+                            line-height: 23px;
+                            padding: 8px 5px;
+                            text-align: center;
+                            text-transform: uppercase;
+
+                            &:first-child {
+                                border-left: none;
+                            }
+                        }
+                    }
+                }
+
+                tbody {
+                    tr {
+                        border-bottom: solid 1px $color-tpv-blue;
+
+                        td {
+                            border-left: solid 1px $color-tpv-blue;
+                            font-size: 16px;
+                            line-height: 23px;
+                            padding: 8px 5px;
+                            text-align: center;
+                            text-transform: uppercase;
+
+                            &:first-child {
+                                border-left: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .footer {
+                font-size: 22px;
+                font-weight: 600;
+                line-height: 32px;
+                padding: 16px 10px;
+                text-align: right;
+                text-transform: uppercase;
+
+                span {
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+
+    &.charge-sale {
+        text-align: center;
+
+        .container {
+            .frame {
+                .total {
+                    font-size: 25px;
+                    line-height: 35px;
+                    margin-bottom: 52px;
+                    text-transform: uppercase;
+
+                    span {
+                        font-size: 35px;
+                    }
+                }
+
+                p {
+                    font-size: 25px;
+                    line-height: 27px;
+                    margin: 0;
+                    text-transform: uppercase;
+                }
+
+                .radio-buttons {
+                    clear: both;
+                    @include clearfix;
+                    padding-top: 31px;
+
+                    [type="radio"]:checked,
+                    [type="radio"]:not(:checked) {
+                        position: absolute;
+                        left: -9999px;
+                    }
+                    [type="radio"]:checked + label,
+                    [type="radio"]:not(:checked) + label
+                    {
+                        margin-right: 30px;
+                        position: relative;
+                        padding-left: 45px;
+                        cursor: pointer;
+                        line-height: 35px;
+                        display: inline-block;
+                    }
+                    [type="radio"]:checked + label:before,
+                    [type="radio"]:not(:checked) + label:before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 35px;
+                        height: 35px;
+                        border: 2px solid $color-tpv-blue;
+                        border-radius: 100%;
+                        background: $color-tpv-white;
+                    }
+                    [type="radio"]:checked + label:after,
+                    [type="radio"]:not(:checked) + label:after {
+                        content: '';
+                        width: 19px;
+                        height: 19px;
+                        background: url(../img/tpv/close_blue.svg) center center no-repeat;
+                        background-size: cover;
+                        position: absolute;
+                        top: 8px;
+                        left: 8px;
+                        border-radius: 100%;
+                        -webkit-transition: all 0.2s ease;
+                        transition: all 0.2s ease;
+                    }
+                    [type="radio"]:not(:checked) + label:after {
+                        opacity: 0;
+                        -webkit-transform: scale(0);
+                        transform: scale(0);
+                    }
+                    [type="radio"]:checked + label:after {
+                        opacity: 1;
+                        -webkit-transform: scale(1);
+                        transform: scale(1);
+                    }
+
+                    label {
+                        font-size: 18px;
+                        font-weight: 500;
+                    }
+                }
+
+            	.amount {
+                    display: none;
+                    font-size: 25px;
+                    font-weight: 600;
+                    margin: 50px auto 0;
+                    text-transform: uppercase;
+                    width: 50%;
+
+                    input {
+                        border: solid 2px $color-tpv-blue;
+                        font-size: 30px;
+                        height: 48px;
+                        line-height: 30px;
+                        padding: 5px;
+                        text-align: right;
+                        width: 157px;
+                    }
+                }
+
+                .diff {
+                    @include clearfix;
+                    display: none;
+                    font-size: 25px;
+                    font-weight: 500;
+                    padding-top: 23px;
+                    text-transform: uppercase;
+
+                    span {
+                        font-size: 35px;
+                        font-weight: 600;
+                    }
+                }
+
+                button {
+                    background-color: $color-tpv-green;
+                    border: none;
+                    margin-top: 48px;
+                }
+            }
+        }
+    }
+}

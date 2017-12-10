@@ -1,0 +1,138 @@
+.visits {
+    .page {
+        display: none;
+        padding: 25px 0 8px;
+
+        &.active {
+            display: block;
+        }
+
+        .regular-sale {
+            background-color: $color-tpv-blue;
+            border: solid 2px $color-tpv-blue;
+            border-radius: 5px;
+            color: $color-tpv-white;
+            display: inline-block;
+            float: left;
+            font-size: 20px;
+            font-weight: 600;
+            height: 80px;
+            line-height: 26px;
+            margin-bottom: 12px;
+            margin-left: 0.9%;
+            padding: 14px 15px 4px;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            vertical-align: middle;
+            width: 24.3%;
+
+            &:hover {
+                background-color: $color-tpv-gray;
+                color: $color-tpv-blue;
+            }
+
+            &:nth-child(4n+1) {
+                clear: both;
+                margin-left: 0;
+            }
+        }
+
+        .visit {
+            border: solid 2px $color-tpv-blue;
+            border-radius: 5px;
+            display: inline-block;
+            float: left;
+            height: 80px;
+            margin-bottom: 12px;
+            margin-left: 0.9%;
+            width: 24.3%;
+
+            &:nth-child(4n+1) {
+                clear: both;
+                margin-left: 0;
+            }
+
+            > a {
+                background-color: $color-tpv-white;
+                color: $color-tpv-blue;
+                display: inline-block;
+                float: left;
+                font-size: 12px;
+                font-weight: 600;
+                height: 100%;
+                line-height: 16px;
+                padding: 4px 15px;
+                text-decoration: none;
+                text-transform: uppercase;
+                width: 73.15%;
+
+                &:hover {
+                    background-color: $color-tpv-gray;
+                }
+            }
+
+            .options {
+                display: inline-block;
+                float: right;
+                width: 26.85%;
+
+                a {
+                    background-color: $color-tpv-blue;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    display: block;
+                    text-indent: -9999px;
+                    width: 100%;
+
+                    &.edit_visit {
+                        background-image: url(../img/tpv/edit.svg);
+                        background-size: 21px 21px;
+                        height: 37px;
+                        margin-bottom: 1px;
+                    }
+
+                    &.close_visit {
+                        background-image: url(../img/tpv/close_visit.svg);
+                        background-size: 14px 19px;
+                        height: 38px;
+                    }
+
+                    &:hover {
+                        background-color: $color-tpv-gray;
+                    }
+                }
+            }
+        }
+    }
+
+    nav {
+        padding: 0;
+
+        a {
+            background: url(../img/tpv/back.svg) center center no-repeat $color-tpv-blue;
+            background-size: 25px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            float: right;
+            height: 48px;
+            margin-left: 0.9%;
+            text-indent: -9999px;
+            width: 24.3%;
+
+            &.next {
+                text-indent: 9999px;
+                @include transformRotate(180deg);
+            }
+
+            &.disabled {
+                background-color: $color-tpv-gray;
+                cursor: default;
+            }
+
+            &:hover {
+                background-color: $color-tpv-gray;
+            }
+        }
+    }
+}

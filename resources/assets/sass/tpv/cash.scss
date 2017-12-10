@@ -1,0 +1,237 @@
+.cash {
+    padding-top: 20px;
+    width: 100%;
+
+	h2 {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1;
+        margin: 0 0 20px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .frame {
+        border: solid 2px $color-tpv-blue;
+        border-radius: 9px;
+        @include clearfix;
+        padding: 25px 16px;
+
+    	.cash-amount {
+            clear: both;
+            display: inline-block;
+            float: left;
+            font-size: 18px;
+            font-weight: 600;
+            text-transform: uppercase;
+            width: 50%;
+
+            span {
+                font-size: 25px;
+            }
+        }
+
+    	.current {
+            display: inline-block;
+            float: left;
+            font-size: 18px;
+            font-weight: 600;
+            text-align: right;
+            text-transform: uppercase;
+            width: 50%;
+
+            input {
+                border: solid 2px $color-tpv-blue;
+                font-size: 20px;
+                height: 36px;
+                line-height: 26px;
+                padding: 5px;
+                text-align: right;
+                width: 157px;
+            }
+        }
+
+        .diff {
+            @include clearfix;
+            display: inline-block;
+            float: right;
+            font-size: 16px;
+            font-weight: 500;
+            padding-top: 16px;
+            text-align: right;
+            text-transform: uppercase;
+        }
+
+        .concept {
+            &.half {
+                display: inline-block;
+                float: left;
+                margin-left: 1%;
+                width: 49.5%;
+
+                &:nth-child(2n+1) {
+                    margin-left: 0;
+                }
+            }
+
+            label {
+                display: block;
+                font-size: 16px;
+                font-weight: 500;
+                margin-bottom: 8px;
+            }
+
+            input {
+                border: solid 2px $color-tpv-blue;
+                display: block;
+                font-size: 14px;
+                line-height: 20px;
+                padding: 8px 10px;
+                width: 100%;
+            }
+        }
+
+        .select {
+            padding: 16px 0 0;
+            position: relative;
+
+            &.half {
+                display: inline-block;
+                float: left;
+                margin-left: 1%;
+                width: 49.5%;
+
+                &:nth-child(2n+1) {
+                    margin-left: 0;
+                }
+            }
+
+            select {
+                appearance: none;
+                background: $color-tpv-white;
+                border: solid 2px $color-tpv-blue;
+                font-size: 16px;
+                height: 40px;
+                line-height: 24px;
+                padding: 5px;
+                width: 100%;
+            }
+
+            &:after {
+                background: url(../img/tpv/select.svg) no-repeat;
+                background-size: cover;
+                content: '';
+                display: block;
+                height: 9px;
+                position: absolute;
+                right: 20px;
+                top: 33px;
+                width: 19px;
+            }
+        }
+
+        .radio-buttons {
+            clear: both;
+            @include clearfix;
+            padding-top: 27px;
+
+            [type="radio"]:checked,
+            [type="radio"]:not(:checked) {
+                position: absolute;
+                left: -9999px;
+            }
+            [type="radio"]:checked + label,
+            [type="radio"]:not(:checked) + label
+            {
+                margin-right: 50px;
+                position: relative;
+                padding-left: 45px;
+                cursor: pointer;
+                line-height: 35px;
+                display: inline-block;
+            }
+            [type="radio"]:checked + label:before,
+            [type="radio"]:not(:checked) + label:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 35px;
+                height: 35px;
+                border: 2px solid $color-tpv-blue;
+                border-radius: 100%;
+                background: $color-tpv-white;
+            }
+            [type="radio"]:checked + label:after,
+            [type="radio"]:not(:checked) + label:after {
+                content: '';
+                width: 19px;
+                height: 19px;
+                background: url(../img/tpv/close_blue.svg) center center no-repeat;
+                background-size: cover;
+                position: absolute;
+                top: 8px;
+                left: 8px;
+                border-radius: 100%;
+                -webkit-transition: all 0.2s ease;
+                transition: all 0.2s ease;
+            }
+            [type="radio"]:not(:checked) + label:after {
+                opacity: 0;
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+            [type="radio"]:checked + label:after {
+                opacity: 1;
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+
+            label {
+                font-size: 16px;
+                font-weight: 500;
+            }
+        }
+
+        .notes {
+            clear: both;
+            margin-top: 20px;
+
+            label {
+                font-size: 16px;
+                font-weight: 500;
+                margin-bottom: 8px;
+            }
+
+            textarea {
+                border: solid 2px $color-tpv-blue;
+                font-size: 14px;
+                height: 80px;
+                line-height: 20px;
+                padding: 10px;
+                width: 100%;
+            }
+        }
+
+    	button {
+            background-color: $color-tpv-blue;
+            border: solid 2px $color-tpv-blue;
+            border-radius: 9px;
+            color: $color-tpv-white;
+            display: block;
+            font-size: 22px;
+            font-weight: 600;
+            line-height: 30px;
+            margin: 20px auto 0;
+            padding: 10px 0;
+            text-transform: uppercase;
+            width: 260px;
+
+            &:hover {
+                background-color: $color-tpv-gray;
+                color: $color-tpv-blue;
+                text-decoration: none;
+            }
+        }
+    }
+}
