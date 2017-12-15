@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Models\User;
+use App\Models\Product;
+use App\Models\Provider;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -24,7 +28,7 @@ class UsersTableSeeder extends Seeder {
 		DB::table('users')->truncate();
 		DB::statement('SET FOREIGN_KEY_CHECKS = 1');
 
-		Models\User::create(['email' => 'davidcouto@gmail.com', 'password' => bcrypt('prueba'), 'name' => 'David Couto', 'role' => 2]);
+		User::create(['email' => 'davidcouto@gmail.com', 'password' => bcrypt('prueba'), 'name' => 'David Couto', 'role' => 2]);
 	}
 }
 
@@ -35,7 +39,7 @@ class ProvidersTableSeeder extends Seeder {
 		DB::table('providers')->truncate();
 		DB::statement('SET FOREIGN_KEY_CHECKS = 1');
 
-		factory(Models\Provider::class, 12)->create();
+		factory(Provider::class, 12)->create();
 	}
 }
 
@@ -46,6 +50,6 @@ class ProductsTableSeeder extends Seeder {
 		DB::table('products')->truncate();
 		DB::statement('SET FOREIGN_KEY_CHECKS = 1');
 
-		factory(Models\Product::class, 40)->create();
+		factory(Product::class, 40)->create();
 	}
 }
