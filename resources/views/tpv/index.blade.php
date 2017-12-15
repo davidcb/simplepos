@@ -8,24 +8,28 @@
 
 <div class="container tpv">
     <div class="products">
-        <div class="pages">
-            @for ($i = 0, $n = sizeof($products); $i < $n; $i++)
-                @if ($i % $perpage == 0)
-                    <div class="page {{ $i == 0 ? 'active' : '' }}">
-                @endif
-                <a class="product" href="#" data-id="{{ $products[$i]->id }}" data-price="{{ $products[$i]->price }}" data-code="{{ $products[$i]->codtpv }}" style="background-color:{{ $products[$i]->color }}">{{ $products[$i]->name }}</a>
-                @if ($i % $perpage == $perpage - 1)
+        @if (sizeof($products))
+            <div class="pages">
+                @for ($i = 0, $n = sizeof($products); $i < $n; $i++)
+                    @if ($i % $perpage == 0)
+                        <div class="page {{ $i == 0 ? 'active' : '' }}">
+                    @endif
+                    <a class="product" href="#" data-id="{{ $products[$i]->id }}" data-price="{{ $products[$i]->price }}" data-code="{{ $products[$i]->codtpv }}" style="background-color:{{ $products[$i]->color }}">{{ $products[$i]->name }}</a>
+                    @if ($i % $perpage == $perpage - 1)
+                        </div>
+                    @endif
+                @endfor
+                @if ($i % $perpage != $perpage - 1)
                     </div>
                 @endif
-            @endfor
-            @if ($i % $perpage != $perpage - 1)
-                </div>
+            </div>
+            @if ($n > $perpage)
+                <nav>
+                    <a class="next {{ $n <= $perpage ? 'disabled' : '' }}" href="#">siguiente</a>
+                    <a class="prev disabled" href="#">anterior</a>
+                </nav>
             @endif
-        </div>
-        <!-- <nav>
-            <a class="next {{ $n <= $perpage ? 'disabled' : '' }}" href="#">siguiente</a>
-            <a class="prev disabled" href="#">anterior</a>
-        </nav> -->
+        @endif
     </div>
     <div class="shopping-list">
         <div class="footer">

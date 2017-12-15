@@ -25,13 +25,13 @@
                 height: 45px;
                 line-height: 12px;
                 margin-bottom: 6px;
-                margin-left: 1.5%;
+                margin-left: 1.6%;
                 padding: 2px 8px;
                 text-align: center;
                 text-decoration: none;
                 text-transform: uppercase;
                 vertical-align: middle;
-                width: 18.8%;
+                width: 23.8%;
                 display: -webkit-box;
                 display: -ms-flexbox;
                 display: flex;
@@ -42,7 +42,7 @@
                    -ms-flex-pack: center;
                  justify-content: center;
 
-                &:nth-child(5n+1) {
+                &:nth-child(4n+1) {
                     clear: both;
                     margin-left: 0;
                 }
